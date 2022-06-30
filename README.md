@@ -1,4 +1,4 @@
-#Hospital Management System
+# Hospital Management System
 <hr>
 <ul>The project was developed in C#,  in accordance SOLID principles.</ul>
 <ul>MSSQL Localdb was used for database in the project.</ul>
