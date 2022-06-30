@@ -1,0 +1,37 @@
+﻿@model HospitalManagementSystem.Models.Patient
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>Delete</h2>
+<p>Are you want to Delete this Patient ?</p>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayFor(model => model.PatientFirstName)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.PatientLastName)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.PatientInsurance)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.PatientAddress)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.PatientPhone)
+        </dt>
+    </dl>
+    <div>
+        @using (Html.BeginForm())
+            {
+              
+    @Html.HiddenFor(model=> model.PatientId)
+                <div class="form-control">
+                    <input type="submit" id="submit1" class="btn btn-danger" value="Delete"/><br />
+                    @Html.ActionLink("Back To Patient List","Index")
+                </div>
+            }
+    </div>
+</div>

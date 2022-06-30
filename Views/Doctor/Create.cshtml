@@ -1,0 +1,44 @@
+﻿@model HospitalManagementSystem.Models.Doctor
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Patient Create</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+       <div class="form-group">
+            @Html.LabelFor(model => model.DoctorFirstName,htmlAttributes: new{@class="col-md-2"})
+            <div class="">
+
+                @Html.EditorFor(model => model.DoctorFirstName, new { @class = "form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorLastName, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorLastName, new { @class="form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorAddress, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorAddress, new { @class="form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorPhone, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorPhone, new { @class="form-control",@rows="2",@cols="10"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input id="submit" class="btn btn-primary" type="submit" value="Create" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("Back to Patient List","Index") <!--isim, actionmethod-->
+</div>

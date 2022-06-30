@@ -1,0 +1,45 @@
+﻿@model HospitalManagementSystem.Models.Doctor
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>Edit Doctor</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model=> model.DoctorId)
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorFirstName,htmlAttributes: new{@class="col-md-2"})
+            <div class="">
+
+                @Html.EditorFor(model => model.DoctorFirstName, new { @class = "form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorLastName, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorLastName, new { @class="form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorAddress, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorAddress, new { @class="form-control"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoctorPhone, htmlAttributes: new { @class = "col-md-2" })
+            <div class="">
+                @Html.EditorFor(model => model.DoctorPhone, new { @class="form-control",@rows="2",@cols="10"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input id="submit" class="btn btn-success" type="submit" value="Edit" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("Back to Doctor List","Index") 
+</div>
